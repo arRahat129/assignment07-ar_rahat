@@ -1,15 +1,36 @@
+import CallButton from '@/components/FriendsDetails/CallButton';
+import TextButton from '@/components/FriendsDetails/TextButton';
+import VideoButton from '@/components/FriendsDetails/VideoButton';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import React from 'react';
 import { FaArchive } from 'react-icons/fa';
 import { FaBell } from 'react-icons/fa6';
-import { FiPhoneCall } from 'react-icons/fi';
+import { FiPhoneCall, FiVideo } from 'react-icons/fi';
+import { MdOutlineTextsms } from 'react-icons/md';
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
 const dataPromise = async () => {
     const res = await fetch("http://localhost:3000//friends.data.json");
     const data = await res.json();
     return data;
+}
+
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+    const friends = await dataPromise();
+    const friend = friends.find((friend) => String(friend.id) === id);
+
+    if (!friend) {
+        return {
+            title: `Person Not Found!1`,
+        };
+    }
+
+    return {
+        title: `${friend.title} - Friend`,
+    };
 }
 
 const FriendsDetails = async ({ params }) => {
@@ -21,9 +42,13 @@ const FriendsDetails = async ({ params }) => {
     const friend = friends.find((friend) => friend.id === Number(friendId));
     // console.log(friend, "Friend");
 
+    if (!friend) {
+        notFound();
+    }
+
     return (
         <main className='bg-base-100'>
-            <section className="container mx-auto px-4 py-12 bg-amber-50 grid grid-cols-5 grid-rows-12 gap-6">
+            <section className="container mx-auto px-4 py-12 bg-amber-50 grid grid-cols-5 grid-rows-12 gap-3">
                 <div className='space-y-2 card bg-white shadow-xl p-6 col-span-2 row-span-6 text-center rounded-lg'>
                     <div className='flex justify-center mb-1'>
                         <Image
@@ -73,40 +98,31 @@ const FriendsDetails = async ({ params }) => {
                     <button className='btn col-span-1 rounded-md'>Edit</button>
                 </div>
 
-                <div className='bg-white shadow-xl p-6 col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
-                <RiNotificationSnoozeLine />
-                <p className='font-medium'>Snooze 2 Weeks</p>
+                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
+                    <RiNotificationSnoozeLine />
+                    <p className='font-medium'>Snooze 2 Weeks</p>
                 </div>
 
                 <div className='bg-white shadow-xl p-6 col-span-3 row-[span_6_/span_12] rounded-lg'>
-                        <h2 className='text-[#244D3F] mb-5'>Quick Check-in</h2>
+                    <h2 className='text-[#244D3F] mb-5'>Quick Check-in</h2>
 
-                        <div className='grid grid-cols-3 gap-5 my-auto h-[70%]'>
-                            <div className='card flex flex-col gap-3 bg-gray-50 shadow-xs py-5 justify-center items-center rounded-lg'>
-                                <FiPhoneCall className='text-green-950 text-3xl' />
-                                <h2 className='text-green-950 font-bold'>Call</h2>
-                            </div>
-                            
-                            <div className='card flex flex-col gap-3 bg-gray-50 shadow-xs py-5 justify-center items-center rounded-lg'>
-                                <FiPhoneCall className='text-green-950 text-3xl' />
-                                <h2 className='text-green-950 font-bold'>Text</h2>
-                            </div>
+                    <div className='grid grid-cols-3 gap-5 my-auto h-[70%]'>
+                        <CallButton friend={friend} />
 
-                            <div className='card flex flex-col gap-3 bg-gray-50 shadow-xs py-5 justify-center items-center rounded-lg'>
-                                <FiPhoneCall className='text-green-950 text-3xl' />
-                                <h2 className='text-green-950 font-bold'>Video</h2>
-                            </div>
-                        </div>
+                        <TextButton friend={friend} />
+
+                        <VideoButton friend={friend} />
+                    </div>
                 </div>
-                
-                <div className='bg-white shadow-xl p-6 col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
-                <FaArchive />
-                <p className='font-medium'>Archive</p>
+
+                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
+                    <FaArchive />
+                    <p className='font-medium'>Archive</p>
                 </div>
-                
-                <div className='bg-white shadow-xl p-6 col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
-                <RiDeleteBinLine className='text-red-500' />
-                <p className='font-medium text-red-600'>Delete</p>
+
+                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
+                    <RiDeleteBinLine className='text-red-500' />
+                    <p className='font-medium text-red-600'>Delete</p>
                 </div>
             </section>
         </main>
