@@ -11,7 +11,7 @@ const StatsPage = async() => {
     const friends = await dataPromise();
     console.log(friends);
     return (
-        <div>
+        <div className='container mx-auto min-h-[50vh]'>
             <h2>This is the Stats Page</h2>
         </div>
     );

@@ -13,7 +13,7 @@ const Friends = async () => {
     // { id, name, picture, email, days_since_contact, goal, next_due_date, status, tags }
 
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto min-h-[50vh]'>
             <h2 className='text-xl font-bold'>Your Friends</h2>
             <div className='grid grid-cols-4 text-center gap-6'>
                 {

@@ -9,7 +9,14 @@ const TextButton = ({ friend }) => {
 
     const handleTexts = () => {
         // console.log("Handle Calls");
-        setTimelines([...timelines, friend]);
+
+        const event = {
+            type: "text",
+            friend: friend,
+            time: new Date().toISOString(),
+        }
+
+        setTimelines([...timelines, event]);
         toast.success(`You called ${friend.name}`);
     }
 
