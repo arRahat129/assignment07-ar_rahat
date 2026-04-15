@@ -2,7 +2,7 @@ import React from 'react';
 import Interactions from '../Stats/Interactions';
 
 const dataPromise = async () => {
-    const res = await fetch("http://localhost:3000//friends.data.json");
+    const res = await fetch("https://assignment07-arrahat-kohl.vercel.app/friends.data.json");
     const data = await res.json();
     return data;
 }

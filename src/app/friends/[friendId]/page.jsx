@@ -8,7 +8,7 @@ import { FaArchive } from 'react-icons/fa';
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
 const dataPromise = async () => {
-    const res = await fetch("http://localhost:3000//friends.data.json");
+    const res = await fetch("https://assignment07-arrahat-kohl.vercel.app/friends.data.json");
     const data = await res.json();
     return data;
 }
