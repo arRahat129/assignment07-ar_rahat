@@ -10,7 +10,12 @@ const CallButton = ({ friend }) => {
 
     const handleCalls = () => {
         // console.log("Handle Calls");
-        setTimelines([...timelines, friend]);
+        const event = {
+            type: "call",
+            friend: friend,
+            time: new Date().toISOString(),
+        }
+        setTimelines(timelines => [...timelines, event]);
         toast.success(`You called ${friend.name}`);
     }
     
