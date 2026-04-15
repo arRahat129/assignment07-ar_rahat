@@ -2,13 +2,9 @@ import CallButton from '@/components/FriendsDetails/CallButton';
 import TextButton from '@/components/FriendsDetails/TextButton';
 import VideoButton from '@/components/FriendsDetails/VideoButton';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
 import { FaArchive } from 'react-icons/fa';
-import { FaBell } from 'react-icons/fa6';
-import { FiPhoneCall, FiVideo } from 'react-icons/fi';
-import { MdOutlineTextsms } from 'react-icons/md';
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
 const dataPromise = async () => {
@@ -98,7 +94,7 @@ const FriendsDetails = async ({ params }) => {
                     <button className='btn col-span-1 rounded-md'>Edit</button>
                 </div>
 
-                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
+                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg hover:transform hover:scale-105 hover:bg-gray-100 cursor-pointer'>
                     <RiNotificationSnoozeLine />
                     <p className='font-medium'>Snooze 2 Weeks</p>
                 </div>
@@ -115,12 +111,12 @@ const FriendsDetails = async ({ params }) => {
                     </div>
                 </div>
 
-                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
+                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg hover:transform hover:scale-105 hover:bg-gray-100 cursor-pointer'>
                     <FaArchive />
                     <p className='font-medium'>Archive</p>
                 </div>
 
-                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg'>
+                <div className='bg-white shadow-xl col-span-2 row-[span_2_/span_6] text-center flex justify-center items-center gap-2 rounded-lg hover:transform hover:scale-105 hover:bg-red-100 cursor-pointer hover:text-xl'>
                     <RiDeleteBinLine className='text-red-500' />
                     <p className='font-medium text-red-600'>Delete</p>
                 </div>

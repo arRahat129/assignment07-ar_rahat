@@ -1,5 +1,4 @@
 import FriendCard from '@/components/FriendCard/FriendCard';
-import Image from 'next/image';
 import React from 'react';
 
 const dataPromise = async () => {

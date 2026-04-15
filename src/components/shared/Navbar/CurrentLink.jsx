@@ -19,7 +19,7 @@ const CurrentLink = ({ items, href, children }) => {
             <button className={`btn ${pathname === href
                 ? "text-white bg-green-950 rounded-md"
                 : "text-gray-700 border-none bg-white"
-            }`}>
+            } hover:transform hover:scale-105`}>
                 {
                     items.text === 'Home'
                         ? <RiHome2Line />

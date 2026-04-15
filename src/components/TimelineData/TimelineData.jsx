@@ -4,7 +4,7 @@ import { FiPhoneCall, FiVideo } from 'react-icons/fi';
 import { MdOutlineTextsms } from 'react-icons/md';
 
 const TimelineData = () => {
-    const { timelines, setTimelines } = useContext(TimelinesContext);
+    const { timelines } = useContext(TimelinesContext);
 
     return (
         <div>

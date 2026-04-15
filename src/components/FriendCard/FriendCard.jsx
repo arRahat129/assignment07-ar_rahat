@@ -24,7 +24,19 @@ const FriendCard = ({ friend }) => {
                         ))
                     }
                 </div>
-                <h2 className='bg-[#EFAD44] text-white py-1 px-2 font-medium text-xs btn w-fit h-fit mx-auto rounded-full'>{friend.status}</h2>
+                <h2 className={`${friend.status === "on-track" 
+                    ? "bg-[#244D3F]"
+                    : friend.status === "almost due"
+                        ? "bg-[#EFAD44]"
+                        : "bg-[#EF4444]"
+                } text-white py-1 px-2 font-medium text-xs btn w-fit h-fit mx-auto rounded-full`}>
+                    {friend.status === "on-track" 
+                    ? "On-Track"
+                    : friend.status === "almost due"
+                        ? "Almost Due"
+                        : "Overdue"
+                }
+                    </h2>
             </div>
         </Link>
     );

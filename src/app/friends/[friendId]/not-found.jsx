@@ -13,7 +13,6 @@ const NotFoundPerson = () => {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
-            {/* Content */}
             <div className="relative z-10 text-center text-white px-6">
                 <h1 className="text-7xl md:text-8xl font-bold mb-4">Error!!</h1>
                 <p className="text-xl md:text-2xl mb-6">
