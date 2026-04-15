@@ -14,18 +14,20 @@ const dataPromise = async () => {
 }
 
 export async function generateMetadata({ params }) {
-    const { id } = await params;
+    const { friendId } = await params;
     const friends = await dataPromise();
-    const friend = friends.find((friend) => String(friend.id) === id);
+    console.log(friendId);
+    
+    const friend = friends.find((friend) => String(friend.id) === friendId);
 
     if (!friend) {
         return {
-            title: `Person Not Found!1`,
+            title: `Person Not Found!`,
         };
     }
 
     return {
-        title: `${friend.title} - Friend`,
+        title: `${friend.name} - Friend`,
     };
 }
 

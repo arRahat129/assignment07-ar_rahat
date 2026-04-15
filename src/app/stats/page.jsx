@@ -1,6 +1,11 @@
 import PieChartRecharts from '@/components/Stats/PieChartRecharts';
 import React from 'react';
 
+export const metadata = {
+    title: "Stats | KeenKeeper",
+    description: "Interaction Stats",
+};
+
 const StatsPage = () => {
 
     return (
