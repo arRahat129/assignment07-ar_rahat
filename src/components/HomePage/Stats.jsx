@@ -18,22 +18,22 @@ const Stats = async () => {
 
 
     return (
-        <div className='grid grid-cols-4 gap-6 container mx-auto '>
-            <div className='card bg-white shadow-lg rounded-lg p-8 text-center space-y-2'>
-                <h1 className='text-[#244D3F] text-[32px] font-semibold'>{friends.length}</h1>
-                <p className='text-[#64748B]'>Total Friends</p>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-6 container mx-auto '>
+            <div className='card bg-white shadow-lg rounded-lg p-8 flex justify-center items-center space-y-2'>
+                <h1 className='text-[#244D3F] text-2xl md:text-[32px] font-semibold'>{friends.length}</h1>
+                <p className='text-[#64748B] text-center'>Total Friends</p>
             </div>
-            <div className='card bg-white shadow-lg rounded-lg p-8 text-center space-y-2'>
-                <h1 className='text-[#244D3F] text-[32px] font-semibold'>
+            <div className='card bg-white shadow-lg rounded-lg p-8 flex justify-center items-center space-y-2'>
+                <h1 className='text-[#244D3F] text-2xl md:text-[32px] font-semibold'>
                     {onTrackCount}
                 </h1>
-                <p className='text-[#64748B]'>On Track</p>
+                <p className='text-[#64748B] text-center'>On Track</p>
             </div>
-            <div className='card bg-white shadow-lg rounded-lg p-8 text-center space-y-2'>
-                <h1 className='text-[#244D3F] text-[32px] font-semibold'>
+            <div className='card bg-white shadow-lg rounded-lg p-8 flex justify-center items-center space-y-2'>
+                <h1 className='text-[#244D3F] text-2xl md:text-[32px] font-semibold'>
                     {needAttention}
                 </h1>
-                <p className='text-[#64748B]'>Need Attention</p>
+                <p className='text-[#64748B] text-center'>Need Attention</p>
             </div>
             <Interactions />
         </div>

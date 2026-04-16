@@ -22,27 +22,32 @@ const Navbar = () => {
 
     return (
         <div className='bg-base-100 shadow-sm'>
-            <div className="navbar container mx-auto py-4">
-                <div className="navbar-start">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-0 py-3 sm:py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+                <div className="flex justify-center md:justify-start">
                     <Link href={"/"}>
                         <Image
                             src={NavImage}
                             alt="NavImage"
-                        / >
+                            className="h-10 w-auto sm:h-12"
+                        />
                     </Link>
                 </div>
-                
-                <div className="navbar-end">
-                    <div>
-                        {
-                            navItems.map((items, i) => (
-                                <CurrentLink key={i} items={items} href={items.path}>
-                                    {items.text}
-                                </CurrentLink>
-                            ))
-                        }
+
+                <div className="flex justify-center md:justify-end">
+                    <div className="flex flex-col md:flex-row flex-wrap justify-center gap-2 sm:gap-3">
+                        {navItems.map((items, i) => (
+                            <CurrentLink
+                                key={i}
+                                items={items}
+                                href={items.path}
+                            >
+                                {items.text}
+                            </CurrentLink>
+                        ))}
                     </div>
                 </div>
+
             </div>
         </div>
     );

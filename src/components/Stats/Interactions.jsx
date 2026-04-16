@@ -8,11 +8,11 @@ const Interactions = () => {
     // console.log(timelines, "Timeline");
 
     return (
-        <div className='card bg-white shadow-lg rounded-lg p-8 text-center space-y-2'>
-                <h1 className='text-[#244D3F] text-[32px] font-semibold'>
+        <div className='card bg-white shadow-lg rounded-lg p-8 flex justify-center items-center space-y-2'>
+                <h1 className='text-[#244D3F] text-2xl md:text-[32px] font-semibold'>
                     {timelines.length}
                 </h1>
-                <p className='text-[#64748B]'>Interations This Month</p>
+                <p className='text-[#64748B] text-center'>Interations This Month</p>
             </div>
     );
 };

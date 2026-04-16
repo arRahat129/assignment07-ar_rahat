@@ -1,36 +1,61 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## **KeenKeeper -- Stay Connected With Your Friends**
 
-First, run the development server:
+## 🔍 Project Description
+
+This is a project created based on Next.js Framework by React.js. This Project is a type of Social Media Platform that can be used to get connected with the friends via calling, texting and video calling.
+
+While creating the project I tried to follow all necessary requirement given as:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. All pages properly loading
+
+2. Showing Loading Interface and if wrong path show Not-Found page
+
+3. All buttons hover effects, and some interactiveness like call, text and video boxes
+
+4. Filter Property working for Options and filter exact data
+
+5. Works for all screens
+
+6. Proper pixel perfect design
+
+7. Stats Page PieCharts interactiveness with Timeline page stored data
+
+8. Home Page Stats Load from friends.data.json file, and Interactions from Timelines stores data length etc.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies to Use
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Technology | Purpose |
+|---|---|
+| **Next.js** | Build the UI |
+| **App router(Next.js)** | Handle page navigation |
+| **Tailwind CSS+Any component library** | Styling and responsiveness |
+| **Recharts** | Chart |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features of this Project
 
-## Learn More
+* Interact with friends and Friend Relationship Management
+* Dynamic Timeline of Interactiveness
+* Dynamic Filtering Process on Timeline
+* Easy to understand PieChart for Stats Visual Representation
+* Smooth User Experience
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Repository of Author
+You can check out [the GitHub repository](https://github.com/arRahat129/assignment07-ar_rahat) of the Author [Mohammad Ashikur Rahman](https://github.com/arRahat129) - your feedback and contributions are welcome!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+## 🚀 Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out this project [**KeenKeeper -- Stay Connected With Your Friends**](https://assignment07-arrahat-kohl.vercel.app/) for more details.
+
+<br>
+<br>
+
+# 👤 AUTHOR
+### **Mohammad Ashikur Rahman**
+### Email: rahashik129@gmail.com
+### Contact: 01833879528

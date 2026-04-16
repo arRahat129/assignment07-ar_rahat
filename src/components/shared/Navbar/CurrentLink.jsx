@@ -14,7 +14,7 @@ const CurrentLink = ({ items, href, children }) => {
     return (
         <Link
             href={href}
-            className={`pb-2 font-semibold ${pathname === href ? "border-b-2 border-purple-500" : ""}`}
+            className={`pb-2 font-semibold ${pathname === href ? "border-b-1 border-green-700" : ""}`}
         >
             <button className={`btn ${pathname === href
                 ? "text-white bg-green-950 rounded-md"

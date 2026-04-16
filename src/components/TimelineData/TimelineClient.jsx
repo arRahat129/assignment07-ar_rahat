@@ -14,10 +14,10 @@ const TimelineClient = () => {
 
     return (
         <div className='container mx-auto space-y-5 min-h-[50vh]'>
-            <h2 className='text-[#1F2937] text-5xl font-bold'>Timeline</h2>
+            <h2 className='text-[#1F2937] text-2xl md:text-4xl lg:text-5xl font-bold'>Timeline</h2>
 
-            <div className='flex flex-col gap-3 max-w-md'>
-                <label htmlFor="" className='text-gray-500 text-lg'>Filter Timeline</label>
+            <div className='flex flex-col mx-auto md:mx-0 gap-3 max-w-md'>
+                <label htmlFor="" className='text-gray-500 text-lg text-center md:text-start'>Filter Timeline</label>
                 <select
                     className="border border-gray-300 px-4 py-2 rounded-lg"
                     onChange={event => setFilterType(event.target.value)}
@@ -31,7 +31,7 @@ const TimelineClient = () => {
 
             <div className="container mx-auto my-10">
                 {processedTimelines.length === 0 ? (
-                    <h2 className="font-bold text-4xl text-center my-5">
+                    <h2 className="font-bold text-2xl md:text-4xl text-center my-5">
                         No Contact found!
                     </h2>
                 ) : (
