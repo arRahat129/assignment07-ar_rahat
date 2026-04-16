@@ -5,7 +5,7 @@ import React from 'react';
 const FriendCard = ({ friend }) => {
     return (
         <Link href={`/friends/${friend.id}`}>
-            <div key={friend.id} className='space-y-2 card bg-white shadow-xl p-6'>
+            <div key={friend.id} className='space-y-2 card bg-white shadow-xl p-6 h-full flex flex-col justify-between'>
                 <div className='flex justify-center mb-1'>
                     <Image
                         src={friend.picture}
@@ -20,7 +20,7 @@ const FriendCard = ({ friend }) => {
                 <div className='flex gap-1 justify-center'>
                     {
                         friend.tags.map((tag, i) => (
-                            <h2 key={i} className='bg-[#CBFADB] text-[#244D3F] font-medium text-xs py-1 px-2 rounded-full'>{tag}</h2>
+                            <h2 key={i} className='bg-[#CBFADB] text-[#244D3F] font-medium text-xs py-1 px-2 rounded-full flex justify-center items-center'>{tag}</h2>
                         ))
                     }
                 </div>
@@ -29,7 +29,7 @@ const FriendCard = ({ friend }) => {
                     : friend.status === "almost due"
                         ? "bg-[#EFAD44]"
                         : "bg-[#EF4444]"
-                } text-white py-1 px-2 font-medium text-xs btn w-fit h-fit mx-auto rounded-full`}>
+                } text-white py-1 px-2 font-medium text-xs btn w-fit h-fit mx-auto rounded-full flex justify-center items-center`}>
                     {friend.status === "on-track" 
                     ? "On-Track"
                     : friend.status === "almost due"

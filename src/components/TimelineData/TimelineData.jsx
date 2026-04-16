@@ -3,8 +3,8 @@ import { TimelinesContext } from '../context/timeline.context';
 import { FiPhoneCall, FiVideo } from 'react-icons/fi';
 import { MdOutlineTextsms } from 'react-icons/md';
 
-const TimelineData = () => {
-    const { timelines } = useContext(TimelinesContext);
+const TimelineData = ({ timelines }) => {
+    // const { timelines } = useContext(TimelinesContext);
 
     return (
         <div>
