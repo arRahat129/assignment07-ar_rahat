@@ -4,6 +4,7 @@ import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/shared/Footer/Footer";
 import Providers from "./lib/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -29,6 +30,8 @@ export default function RootLayout({ children }) {
           <Footer />
           <ToastContainer />
         </Providers>
+
+        <Analytics />
       </body>
     </html>
   );
