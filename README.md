@@ -15,7 +15,7 @@ While creating the project I tried to follow all necessary requirement given as:
 
 3. All buttons hover effects, and some interactiveness like call, text and video boxes
 
-4. Filter Property working for Options and filter exact data
+4. Filter Property working for Options and filter exact data and also a Sorting Process to Sort data based on date
 
 5. Works for all screens
 
@@ -39,7 +39,7 @@ While creating the project I tried to follow all necessary requirement given as:
 
 * Interact with friends and Friend Relationship Management
 * Dynamic Timeline of Interactiveness
-* Dynamic Filtering Process on Timeline
+* Dynamic Filtering Process on Timeline and Sorting
 * Easy to understand PieChart for Stats Visual Representation
 * Smooth User Experience
 
