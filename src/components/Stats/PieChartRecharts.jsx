@@ -11,10 +11,10 @@ const PieChartRecharts = () => {
     if (timelines.length === 0) {
         return (
             <div className="container mx-auto my-10 p-10 text-center bg-white shadow-lg min-h-[50vh]">
-                <h2 className="text-2xl font-semibold text-gray-600">
+                <h2 className="text-2xl md:text-4xl font-bold text-blue-900">
                     No activity yet!!
                 </h2>
-                <p className="text-gray-400 mt-2">
+                <p className="text-gray-400 mt-2 md:text-lg">
                     Start calling, texting, or video to see stats here.
                 </p>
             </div>
